@@ -1,5 +1,6 @@
 package com.Descomplica.CRUD_Farmacia.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,6 +23,7 @@ public class Usuario {
 	
 	@NotNull(message = "Usuario é obrigatório")
 	@Email(message = "O atributo usuario deve ser um email válido")
+	@Schema(example = "email@email.com.br")
 	private String usuario;
 	
 	@NotNull(message = "Senha é obrigatório")
